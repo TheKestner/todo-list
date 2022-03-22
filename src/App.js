@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
+import Input from './components/Input';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>Test</h1>
-      </header>
+      <Input />
     </div>
   );
 }
