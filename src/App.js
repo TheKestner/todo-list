@@ -4,6 +4,7 @@ import axios from 'axios';
 import Input from './components/Input';
 import Status from './components/Statusbtn';
 import Todo from './components/Todo';
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
 
