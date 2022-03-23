@@ -35,7 +35,7 @@ export default function App() {
       <button onClick={addTodo}>
         TEST ME
       </button>
-      <Input />
+      <Input addTodo={addTodo}/>
       <Todo />
       <Status />
     

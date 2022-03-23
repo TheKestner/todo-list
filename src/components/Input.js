@@ -6,11 +6,12 @@ import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "r
 // need state from setInputText,inputText
 // Maybe need onSubmit/onKeyDown
 
-export default function Input() {
+export default function Input({addTodo}) {
  return(
      <>
        <InputGroup className="mb-3">
-       <FormControl
+       <FormControl 
+      onChange={addTodo}
       placeholder="Enter Todos"
       aria-label="Enter Todos"
       aria-describedby="basic-addon2"
