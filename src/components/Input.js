@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "react-bootstrap";
 
 
-
+// need state from setInputText,inputText
+// Maybe need onSubmit/onKeyDown
 
 export default function Input() {
  return(
