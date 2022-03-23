@@ -8,14 +8,12 @@ import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "r
 export default function Input() {
  return(
      <>
-     <h1>todos</h1>
        <InputGroup className="mb-3">
        <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
+      placeholder="Enter Todos"
+      aria-label="Enter Todos"
       aria-describedby="basic-addon2"
     />
-    {/* <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text> */}
   </InputGroup>
   </>
 
