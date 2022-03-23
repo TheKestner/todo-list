@@ -23,7 +23,7 @@ export default function App() {
     //it also should generate a unique ID that should greatest ID+1
     //status should be active by default this is probably fine to leave as a string
     newState.push({text:"example todo", id:[newID], status:'active'})
-    setTodos(newState)
+    setTodos([...newState])
     //setLocalStorage should probably happen here.
     console.log(todos)
   }
@@ -36,7 +36,7 @@ export default function App() {
       <button onClick={addTodo}>
         TEST ME
       </button>
-      <Input addTodo={addTodo}/>
+      <Input addTodo={addTodo} todos={todos}/>
       <Todo />
       <Status />
     

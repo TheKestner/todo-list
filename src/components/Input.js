@@ -1,24 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "react-bootstrap";
-import Todo from "./Todo";
+
 
 
 // need state from setInputText,inputText
 // Maybe need onSubmit/onKeyDown
 // const InputKey = () => {
-  const handleKeyDown = (event, addTodo) => {
-    if (event.key === 'Enter') {
-      console.log(addTodo)
-    }
-  }
 
 //   return <input type="text" onKeyDown={handleKeyDown} />
 // }
 
 
 
-export default function Input() {
+export default function Input({addTodo, todos}) {
+
+  const handleKeyDown = (event, addTodo) => {
+    if (event.key === 'Enter') {
+      addTodo()
+    }
+  }
+
  return(
      <>
        <InputGroup className="mb-3">
