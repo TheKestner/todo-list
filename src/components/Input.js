@@ -13,11 +13,11 @@ import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "r
 
 
 
-export default function Input({addTodo, todos}) {
+export default function Input({addTodo, todos, setTodos}) {
 
-  const handleKeyDown = (event, addTodo) => {
+  const keyDownHandler = (event) => {
     if (event.key === 'Enter') {
-      addTodo()
+      addTodo(event.target.value)
     }
   }
 
@@ -25,7 +25,7 @@ export default function Input({addTodo, todos}) {
      <>
        <InputGroup className="mb-3">
        <FormControl 
-      onKeyDown={(e) => handleKeyDown(e, addTodo)}
+      onKeyDown={(e) => keyDownHandler(e)}
       placeholder="Enter Todos"
       aria-label="Enter Todos"
       aria-describedby="basic-addon2"
