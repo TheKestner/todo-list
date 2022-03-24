@@ -11,12 +11,12 @@ export default function Todolist({addtodos,todos, text}) {
           <Col> {text} </Col>
         </Row>
         <Button variant="success">Complete</Button>{' '}
-        <Button variant="danger">Remove</Button>{' '}
+        <Button type="submit" variant="danger">Remove</Button>{' '}
       </Container>
     );
 }
 
-
+// onClick={HandleDelete}
 
 {/* <div> 
        <li> {text} </li> 
