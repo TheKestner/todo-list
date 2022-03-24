@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function App() {
 
   // maybe need SUM STATE?
-  // const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState("");
   // [todos, setTodos] = useState([]);
   // [status, setStatus] = useState([]);
   const [todos, setTodos] = useState([]);
@@ -24,6 +24,7 @@ export default function App() {
     //setLocalStorage should probably happen here.
     console.log(todos)
   }
+ 
 
   //function test
 
@@ -32,7 +33,7 @@ export default function App() {
       <header>
       <h1>Todo Lists</h1>
       </header>
-      <Input addTodo={addTodo} todos={todos}/>
+      <Input addTodo={addTodo} todos={todos} inputText={inputText} setInputText={setInputText}/>
       <Todo addTodo={addTodo} todos={todos}/>
       <Status />
     
