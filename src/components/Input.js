@@ -3,14 +3,29 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Form, Button, FormGroup, FormControl, ControlLabel, InputGroup} from "react-bootstrap";
 
 
+
 // need state from setInputText,inputText
 // Maybe need onSubmit/onKeyDown
+// const InputKey = () => {
 
-export default function Input() {
+//   return <input type="text" onKeyDown={handleKeyDown} />
+// }
+
+
+
+export default function Input({addTodo, todos, setTodos}) {
+
+  const keyDownHandler = (event) => {
+    if (event.key === 'Enter') {
+      addTodo(event.target.value)
+    }
+  }
+
  return(
      <>
        <InputGroup className="mb-3">
-       <FormControl
+       <FormControl 
+      onKeyDown={(e) => keyDownHandler(e)}
       placeholder="Enter Todos"
       aria-label="Enter Todos"
       aria-describedby="basic-addon2"
