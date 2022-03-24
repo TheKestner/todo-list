@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function App() {
 
   // maybe need SUM STATE?
-  const [inputText, setInputText] = useState("");
+  // const [inputText, setInputText] = useState("");
   // [todos, setTodos] = useState([]);
   // [status, setStatus] = useState([]);
   const [todos, setTodos] = useState([]);
@@ -33,7 +33,7 @@ export default function App() {
       <h1>Todo Lists</h1>
       </header>
       <Input addTodo={addTodo} todos={todos}/>
-      <Todo />
+      <Todo addTodo={addTodo} todos={todos}/>
       <Status />
     
     </div>
