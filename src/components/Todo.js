@@ -1,13 +1,17 @@
 import React from "react";
 import CloseButton from 'react-bootstrap/CloseButton'
 import { ListGroup, ListGroupItem } from "react-bootstrap";
+import Todolist from "./Todolist";
 
-export default function Todo() {
+export default function Todo({addTodo, todos}) {
+    
     return(
         <>
        <div> 
     <ListGroup>
-        <ListGroup.Item>test Todo </ListGroup.Item>
+        <ListGroup.Item> 
+        {todos.map((todo) => <Todolist key={todo.id} text={todo.text} /> )}
+        </ListGroup.Item>
     </ListGroup>
        </div>
         </>
@@ -18,3 +22,7 @@ export default function Todo() {
 // <CloseButton />
 // may need to map for text ex: todos.map((todo) => ( <Todo key={todo.id} text={todo.text />}))
 //
+
+// {todos.map((todo) => <Todo key={todo.id} text={todo.text} /> )}
+
+//{todos.map((todo) => <Todo key={todo.id} text={todo.text} /> )}
