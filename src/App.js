@@ -32,9 +32,6 @@ export default function App() {
       <header>
       <h1>Todo Lists</h1>
       </header>
-      <button onClick={addTodo}>
-        TEST ME
-      </button>
       <Input addTodo={addTodo} todos={todos}/>
       <Todo />
       <Status />
@@ -44,7 +41,9 @@ export default function App() {
 }
 
 
-
+{/* <button onClick={addTodo}>
+        TEST ME
+      </button> */}
 //.  function addTodo(){
 //   //this can't be right.  There should be a way to get the info directly from the input field
 //   let newState = toDos;
