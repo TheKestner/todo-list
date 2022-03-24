@@ -41,20 +41,8 @@ export default function App() {
 }
 
 
-{/* <button onClick={addTodo}>
-        TEST ME
-      </button> */}
-//.  function addTodo(){
-//   //this can't be right.  There should be a way to get the info directly from the input field
-//   let newState = toDos;
-//   //the goal is to get the text from the text box into the text field.
-//   //it also should generate a unique ID that should greatest ID+1
-//   //status should be active by default this is probably fine to leave as a string
-//   newState.push({text:"example todo", id:'0', status:'active'})
-//   setToDos(newState)
-//   //setLocalStorage should probably happen here.
-//   console.log(toDos)
-// }/
+
+
 
 // {text: 'do laundry',
 // id: '0',
