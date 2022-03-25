@@ -10,7 +10,7 @@ export default function Todo({todos, setTodos}) {
        <div> 
     <ListGroup>
         <ListGroup.Item> 
-        {todos.map((todo) => <Todolist key={todo.id} text={todo.text} todos={todos} setTodos={setTodos}/> )}
+        {todos.map((todo) => <Todolist key={todo.id} text={todo.text} todo={todo} todos={todos} setTodos={setTodos}/> )}
         </ListGroup.Item>
     </ListGroup>
        </div>

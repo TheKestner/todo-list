@@ -22,7 +22,7 @@ export default function App() {
       {
         text: text, 
         id: Date.now(), 
-        status: "active"
+        status: true
       }
     ])
   }

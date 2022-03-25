@@ -1,10 +1,18 @@
 import React from "react";
 import {Container, Button, Row, Col, NavItem} from 'react-bootstrap'
 
-export default function Todolist({todos, text, setTodos}) {
+export default function Todolist({todos, text, setTodos, todo}) {
 
   const gottaDelete = () => {
     setTodos(todos.filter(todo => todo.id !== todo.id))
+  }
+
+  const markStatus = () => {
+    if(todo.status === true){
+      todo.status = false;
+    } else if (todo.status === false){
+      todo.status = true;
+    }
   }
     
     return(
@@ -12,13 +20,13 @@ export default function Todolist({todos, text, setTodos}) {
         <Row>
           <Col> {text} </Col>
         </Row>
-        <Button variant="success">Complete</Button>{' '}
+        <Button onClick={markStatus} variant="success">Complete</Button>{' '}
         <Button onClick={gottaDelete} type="submit" variant="danger">Remove</Button>{' '}
       </Container>
     );
 }
 
-// onClick={HandleDelete}
+
 
 {/* <div> 
        <li> {text} </li> 
