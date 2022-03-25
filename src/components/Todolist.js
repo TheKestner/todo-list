@@ -4,7 +4,7 @@ import {Container, Button, Row, Col, NavItem} from 'react-bootstrap'
 export default function Todolist({todos, text, setTodos, todo}) {
 
   const gottaDelete = () => {
-    setTodos(todos.filter(todo => todo.id !== todo.id))
+    setTodos(todos.filter(item => item.id !== todo.id))
   }
 
   const markStatus = () => {
