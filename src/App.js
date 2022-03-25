@@ -37,7 +37,7 @@ export default function App() {
       </header>
       <Input addTodo={addTodo} todos={todos} inputText={inputText} setInputText={setInputText}/>
       <Todo addTodo={addTodo} todos={todos} setTodos={setTodos}/>
-      <Status />
+      <Status addTodo={addTodo} todos={todos} setTodos={setTodos}/>
     
     </div>
   );
