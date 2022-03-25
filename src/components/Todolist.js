@@ -13,6 +13,7 @@ export default function Todolist({todos, text, setTodos, todo}) {
     } else if (todo.status === false){
       todo.status = true;
     }
+    //may need css to add linethrough on false
   }
     
     return(
