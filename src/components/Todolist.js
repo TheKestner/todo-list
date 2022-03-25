@@ -15,6 +15,8 @@ export default function Todolist({todos, text, setTodos, todo}) {
     }
     //may need css to add linethrough on false
   }
+
+  let len = todos.length;
     
     return(
         <Container fluid="md">
@@ -28,9 +30,6 @@ export default function Todolist({todos, text, setTodos, todo}) {
 }
 
 
-
-{/* <div> 
-       <li> {text} </li> 
-       </div>
-       <button>Completed</button>
-       <button>Danger</button> */}
+// const getCount = () => {
+//   todos.filter()
+// }
