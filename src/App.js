@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import axios from 'axios';
 import Input from './components/Input';
 import Status from './components/Statusbtn';
 import Todo from './components/Todo';
@@ -23,9 +22,6 @@ export default function App() {
   
  
   function addTodo(text){
-    // let newState = todos;
-    // const newID = Date.now();
-    // newState.push({text: text, id: newID, status:'active'})
     setTodos([...todos,
       {
         text: text, 
@@ -35,8 +31,6 @@ export default function App() {
     ])
   }
  
-
-  //function test
 
   return (
     <div className="App">
@@ -51,14 +45,3 @@ export default function App() {
   );
 }
 
-
-
-
-
-// {text: 'do laundry',
-// id: '0',
-// status:'active'},
-// {text: 'do something',
-// id: '1',
-// status:'active'
-// }

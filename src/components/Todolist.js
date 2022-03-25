@@ -16,7 +16,6 @@ export default function Todolist({todos, text, setTodos, todo}) {
     //may need css to add linethrough on false
   }
 
-  let len = todos.length;
     
     return(
         <Container fluid="md">

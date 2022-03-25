@@ -18,11 +18,5 @@ export default function Todo({todos, setTodos}) {
     );
 }
 
-//<li className="todo">Pass text here?</li> 
-// <CloseButton />
+
 // may need to map for text ex: todos.map((todo) => ( <Todo key={todo.id} text={todo.text />}))
-//
-
-// {todos.map((todo) => <Todo key={todo.id} text={todo.text} /> )}
-
-//{todos.map((todo) => <Todo key={todo.id} text={todo.text} /> )}
