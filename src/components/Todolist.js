@@ -1,9 +1,11 @@
 import React from "react";
-import {Container, Button, Row, Col} from 'react-bootstrap'
+import {Container, Button, Row, Col, NavItem} from 'react-bootstrap'
 
-export default function Todolist({addtodos,todos, text}) {
+export default function Todolist({todos, text, setTodos}) {
 
-
+  const gottaDelete = () => {
+    setTodos(todos.filter(todo => todo.id !== todo.id))
+  }
     
     return(
         <Container fluid="md">
@@ -11,7 +13,7 @@ export default function Todolist({addtodos,todos, text}) {
           <Col> {text} </Col>
         </Row>
         <Button variant="success">Complete</Button>{' '}
-        <Button type="submit" variant="danger">Remove</Button>{' '}
+        <Button onClick={gottaDelete} type="submit" variant="danger">Remove</Button>{' '}
       </Container>
     );
 }

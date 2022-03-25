@@ -10,19 +10,21 @@ export default function App() {
 
   // maybe need SUM STATE?
   const [inputText, setInputText] = useState("");
-  // [todos, setTodos] = useState([]);
   // [status, setStatus] = useState([]);
   const [todos, setTodos] = useState([]);
-
+  
  
   function addTodo(text){
-    let newState = todos;
-    const newID = Date.now();
-    //the goal is to get the text from the text box into the text field.
-    newState.push({text: text, id: newID, status:'active'})
-    setTodos([...newState])
-    //setLocalStorage should probably happen here.
-    console.log(todos)
+    // let newState = todos;
+    // const newID = Date.now();
+    // newState.push({text: text, id: newID, status:'active'})
+    setTodos([...todos,
+      {
+        text: text, 
+        id: Date.now(), 
+        status: "active"
+      }
+    ])
   }
  
 
@@ -34,7 +36,7 @@ export default function App() {
       <h1>Todo Lists</h1>
       </header>
       <Input addTodo={addTodo} todos={todos} inputText={inputText} setInputText={setInputText}/>
-      <Todo addTodo={addTodo} todos={todos}/>
+      <Todo addTodo={addTodo} todos={todos} setTodos={setTodos}/>
       <Status />
     
     </div>
