@@ -14,7 +14,7 @@ export default function Status({todos, setTodos}) {
         <Button variant="secondary">All</Button>
         <Button variant="secondary">Active</Button>
         <Button variant="secondary">Completed</Button>
-        <Button onClick={gottaDelete}variant="secondary">DELETE ALL</Button>
+        <Button onClick={gottaDelete} variant="secondary">DELETE ALL</Button>
         </ButtonGroup>
      </>
    
